@@ -43,6 +43,7 @@ server console to get your O-Auth Token.
 | write           |  Write to Google sheets             | sheetID, accessToken, page, slot1, slot2, values      |
 | delete          |  Delete from Google sheets          | sheetID, accessToken, page, slot1, slot2      |
 
+
 | Parameters      | Description                         | Type            |
 |-----------------|-------------------------------------|-----------------|
 | sheetID         |  The sheetID from the document      | string          |
@@ -54,3 +55,39 @@ server console to get your O-Auth Token.
 | value           |  The values you want to enter       | table           |
 
 ## Examples
+
+### Reading
+```lua
+local sheetID = 'ID'
+local APIkey = 'Key'
+local page = 's2'
+local slot1 = 'A1'
+local slot2 = 'B3'
+
+local exit = exports['f_googlesheets']:read(sheetID, APIkey, page, slot1, slot2)
+print(json.encode(ex))
+```
+
+### Writing
+```lua
+local sheetID = 'ID'
+local accessToken = 'Token'
+local page = 's2'
+local slot1 = 'A1'
+local slot2 = 'B3'
+local value = {
+    {'1', '2'},
+    {'3', '4'},
+}
+exports['f_googlesheets']:write(sheetID, accessToken, page, slot1, slot2, value)
+```
+
+### Deleting
+```lua
+local sheetID = 'ID'
+local accessToken = 'Token'
+local page = 's2'
+local slot1 = 'A1'
+local slot2 = 'B3'
+exports['f_googlesheets']:delete(sheetID, accessToken, page, slot1, slot2)
+```
