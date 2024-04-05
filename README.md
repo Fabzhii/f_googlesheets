@@ -6,11 +6,11 @@ Standalone FiveM API to Read, Write and Delete from Google Sheet Documents
 ### SheetID
 Open you google sheet document and copy the URL.
 In the URL you will find your SheetID:
-https://docs.google.com/spreadsheets/d/ {YOUR SHEETID} /edit#gid=...
+``https://docs.google.com/spreadsheets/d/ {YOUR SHEETID} /edit#gid=...``
 
 ### API key
 In order to Read from public documents you need an API Key.
-Visit the [https://console.cloud.google.com/apis/](API Manager) to create 
+Visit https://console.cloud.google.com/apis/ to create 
 a new project. Then head over to the library tab and anable the  Google Sheets API.
 Under credentials you can create an API key. 
 
