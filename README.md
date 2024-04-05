@@ -20,7 +20,7 @@ Open the consent settings and check "extern" and click create. Then enter a name
 and your google email. On the next page click add fields and tick everything with 
 "Google Sheets API". Then click save and exit and add yourself as an test user.
 Afterwards under credentials you can create a OAuth-Client-ID. Select Webservice and 
-add a forwarding domain. You can use andy URL but I have chosen https://www.google.com.
+add a forwarding domain. You can use any URL but I have chosen https://www.google.com.
 Create the URL und open it.
 ```
 https://accounts.google.com/o/oauth2/auth?
