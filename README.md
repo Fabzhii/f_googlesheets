@@ -31,3 +31,26 @@ client_id=YOUR_CLIENT_ID
 ```
 You will get redirected but your authCode is in the url:
 ``https://www.google.com/?code= {authCode}``
+
+Use the command ``getToken {clientID} {clientSecret} {redirectURI} {authCode}`` in the 
+server console to get your O-Auth Token.
+
+## Usage
+
+| Exports         | Description                         | Parameter(s)    |
+|-----------------|-------------------------------------|-----------------|
+| read            |  Read from public Google sheets     | sheetID, APIkey, page, slot1, slot2      |
+| write           |  Write to Google sheets             | sheetID, accessToken, page, slot1, slot2, values      |
+| delete          |  Delete from Google sheets          | sheetID, accessToken, page, slot1, slot2      |
+
+| Parameters      | Description                         | Type            |
+|-----------------|-------------------------------------|-----------------|
+| sheetID         |  The sheetID from the document      | string          |
+| APIkey          |  Your API key                       | string          |
+| accessToken     |  Your generated Token               | string          |
+| page            |  The page name                      | string          |
+| slot1           |  The starting slot                  | string          |
+| slot2           |  The ending slot                    | string          |
+| value           |  The values you want to enter       | table           |
+
+## Examples
